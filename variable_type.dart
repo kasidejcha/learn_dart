@@ -14,6 +14,30 @@ main() {
   print('$weakVariable');
   weakVariable = 'weak variable';
   print('$weakVariable');
+  print('');
 
+  assert_type();
 
+  const_var();
+}
+
+void assert_type() {
+  var one = int.parse('1');
+  assert(one == 1);
+
+  var one_one = double.parse('1.1');
+  assert(one_one == 1.1);
+
+  String onestring = 1.toString();
+  assert(onestring == '1');
+
+  String pistring = 3.14159.toStringAsFixed(2);
+  assert(pistring == '3.14');
+}
+
+// const type variables -> cannot change during runtime
+void const_var() {
+  const constNum = 0;
+  print(constNum);
+  print(constNum.runtimeType);
 }
