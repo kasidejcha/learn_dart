@@ -14,6 +14,13 @@ void main() {
     number = class_num.number;
     print(number);
   }
+
+// Null Aware Operator
+  var n = class_number();
+  int check_number;
+  check_number = n?.number ?? 0;
+  print(check_number);
+
 }
 
 class class_number {
